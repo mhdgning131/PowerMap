@@ -35,3 +35,12 @@ powerMap.ps1 <target(s)> [-Ports <ports>] [-Timeout <ms>] [-HostTimeout <ms>] [-
 # Fast scan with custom timeout
 .\powerMap.ps1 192.168.1.1-50 -Timeout 50
 ```
+# Bonus ++
+If you need a simple single one liner command to perform port scanning on a host: use this command:
+```powershell
+echo "PORT    STATE"; port,port,port | % {$p=$_;try{$c=New-Object Net.Sockets.TcpClient;$c.Connect("Hosts IP",$p);"$p    OPEN"}catch{"$p    CLOSED/FILTRD"}}
+
+# For example if i wanna scan 192.168.1.1 for common ports like 21,22,23,53,80,443,3389,8080
+# I do it like this
+echo "PORT    STATE"; 21,22,23,53,80,443,3389,8080 | % {$p=$_;try{$c=New-Object Net.Sockets.TcpClient;$c.Connect("192.168.1.1",$p);"$p    OPEN"}catch{"$p    CLOSED/FILTRD"}}
+```
