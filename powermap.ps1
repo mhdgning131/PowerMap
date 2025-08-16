@@ -68,7 +68,7 @@ function Write-StatusWarning {
 function Write-NmapHeader {
     param([string]$Version, [string]$DateTime)
     Write-Host ""
-    Write-Host "Starting PowerMap $Version ( https://github.com/powermap ) at $DateTime" -ForegroundColor White
+    Write-Host "Starting PowerMap $Version ( https://github.com/mhdgning131/PowerMap ) at $DateTime" -ForegroundColor White
 }
 
 function Write-NmapScanReport {
@@ -616,3 +616,4 @@ $actualHostsUp = $aliveHosts.Count
 
 
 Write-NmapFooter -TotalScanned $totalScanned -HostsUp $expandedTargets.Count -Duration $duration
+
