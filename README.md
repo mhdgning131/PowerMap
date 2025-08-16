@@ -24,14 +24,14 @@ powerMap.ps1 <target(s)> [-Ports <ports>] [-Timeout <ms>] [-HostTimeout <ms>] [-
 
 ```powershell
 # Scan a single host
-.\PowerMap.ps1 192.168.1.1
+.\powerMap.ps1 192.168.1.1
 
 # Scan a network range
-.\PowerMap.ps1 192.168.1.0/24
+.\powerMap.ps1 192.168.1.0/24
 
 # Scan specific ports
-.\PowerMap.ps1 mohamedg.me -Ports 80,443,22,21
+.\powerMap.ps1 mohamedg.me -Ports 80,443,22,21
 
 # Fast scan with custom timeout
-.\PowerMap.ps1 192.168.1.1-50 -Timeout 50
+.\powerMap.ps1 192.168.1.1-50 -Timeout 50
 ```
