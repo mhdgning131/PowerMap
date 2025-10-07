@@ -615,5 +615,5 @@ $totalScanned = $expandedTargets.Count
 $actualHostsUp = $aliveHosts.Count
 
 
-Write-NmapFooter -TotalScanned $totalScanned -HostsUp $expandedTargets.Count -Duration $duration
+Write-NmapFooter -TotalScanned $totalScanned -HostsUp $actualHostsUp -Duration $duration
 
